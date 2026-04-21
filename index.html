@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Documentos Vehiculares</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-animation">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="blob blob3"></div>
+    </div>
+
+    <div class="container">
+      <header class="header">
+        <h1>Generador de Documentos</h1>
+        <p>
+          Complete la información para generar los contratos
+        </p>
+      </header>
+
+      <form id="docForm" class="glass-form">
+        <div class="form-grid">
+          <!-- Sección Fecha -->
+          <div class="form-group full-width">
+            <h3 class="section-title">Fecha del Contrato</h3>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha">Fecha <span class="required">*</span></label>
+            <input type="date" id="fecha" name="fecha" required />
+          </div>
+
+          <div class="form-group">
+            <label for="dia">Día</label>
+            <input
+              type="text"
+              id="dia"
+              name="dia"
+              readonly
+              placeholder="Ej: 16"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mes">Mes</label>
+            <input
+              type="text"
+              id="mes"
+              name="mes"
+              readonly
+              placeholder="Ej: abril"
+            />
+          </div>
+          <div class="form-group">
+            <label for="anio">Año</label>
+            <input
+              type="text"
+              id="anio"
+              name="anio"
+              readonly
+              placeholder="Ej: 2026"
+            />
+          </div>
+
+          <!-- Sección Intermediario -->
+          <div class="form-group full-width">
+            <h3 class="section-title">Información del Intermediario</h3>
+          </div>
+
+          <div class="form-group">
+            <label for="nombre_intermediario"
+              >Nombre del Intermediario <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="nombre_intermediario"
+              name="nombre_intermediario"
+              required
+              placeholder="Emilio Sanchez"
+            />
+          </div>
+          <div class="form-group">
+            <label for="estado_civil_intermediario"
+              >Estado Civil (Intermediario)
+              <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="estado_civil_intermediario"
+              name="estado_civil_intermediario"
+              required
+              placeholder="Soltero"
+            />
+          </div>
+
+          <!-- Sección Cliente -->
+          <div class="form-group full-width">
+            <h3 class="section-title">Información del Cliente</h3>
+          </div>
+
+          <div class="form-group">
+            <label for="nombre"
+              >Nombre del Cliente <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              placeholder="Jose Hernandez"
+            />
+          </div>
+          <div class="form-group">
+            <label for="estado_civil"
+              >Estado Civil (Cliente) <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="estado_civil"
+              name="estado_civil"
+              required
+              placeholder="Soltero"
+            />
+          </div>
+
+          <!-- Sección Vehículo -->
+          <div class="form-group full-width">
+            <h3 class="section-title">Información del Vehículo</h3>
+          </div>
+
+          <div class="form-group">
+            <label for="marca"
+              >Marca del Auto <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="marca"
+              name="marca"
+              required
+              placeholder="Volvo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="modelo"
+              >Modelo del Auto <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="modelo"
+              name="modelo"
+              required
+              placeholder="Prado Confort AC 1.4 TM"
+            />
+          </div>
+          <div class="form-group">
+            <label for="chasis">Chasis <span class="required">*</span></label>
+            <input
+              type="text"
+              id="chasis"
+              name="chasis"
+              required
+              placeholder="LS5A2ABR3PD911889"
+            />
+          </div>
+          <div class="form-group">
+            <label for="motor">Motor <span class="required">*</span></label>
+            <input
+              type="text"
+              id="motor"
+              name="motor"
+              required
+              placeholder="JL473Q4N3EA502175"
+            />
+          </div>
+          <div class="form-group">
+            <label for="color">Color <span class="required">*</span></label>
+            <input
+              type="text"
+              id="color"
+              name="color"
+              required
+              placeholder="Blanco"
+            />
+          </div>
+          <div class="form-group">
+            <label for="anio_vehiculo"
+              >Año del Vehículo <span class="required">*</span></label
+            >
+            <input
+              type="number"
+              id="anio_vehiculo"
+              name="anio_vehiculo"
+              required
+              placeholder="2012"
+              min="1950"
+              max="2100"
+            />
+          </div>
+          <div class="form-group">
+            <label for="placa">Placa <span class="required">*</span></label>
+            <input
+              type="text"
+              id="placa"
+              name="placa"
+              required
+              placeholder="PBZ1234"
+              minlength="6"
+              maxlength="7"
+              pattern="[A-Za-z0-9]{6,7}"
+              title="La placa debe tener entre 6 y 7 caracteres alfanuméricos"
+            />
+          </div>
+
+          <!-- Sección Valores -->
+          <div class="form-group full-width">
+            <h3 class="section-title">Valores</h3>
+          </div>
+
+          <div class="form-group">
+            <label for="valor">Valor ($) <span class="required">*</span></label>
+            <input
+              type="number"
+              id="valor"
+              name="valor"
+              required
+              placeholder="10850.00"
+              step="0.01"
+              min="0"
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="valor_letras">Valor en Letras</label>
+            <input
+              type="text"
+              id="valor_letras"
+              name="valor_letras"
+              readonly
+          </div>
+
+
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Generar Documentos</button>
+        </div>
+      </form>
+    </div>
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "document-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Miguel Angel Baquero <migue_uio93@hotmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "docxtemplater": "^3.68.5",
+    "express": "^5.2.1",
+    "pizzip": "^3.2.0"
+  }
+}
