@@ -9,10 +9,16 @@ const ACCEPTED_ORIGINS = [
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => {
   return cors({
     origin: (origin, callback) => {
-      // console.debug('Origin:', origin); // Log the origin
+      // Permitir si está en la lista de orígenes explícitos, o si no tiene origin (Postman/Local)
       if (acceptedOrigins.includes(origin) || !origin) {
         return callback(null, true);
       }
+      
+      // Permitir dinámicamente todas las URLs generadas por Vercel (Previews y Producción)
+      if (origin.endsWith('.vercel.app')) {
+        return callback(null, true);
+      }
+
       return callback(new Error('Not allowed by CORS'));
     },
   });
