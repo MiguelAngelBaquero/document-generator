@@ -19,7 +19,7 @@ app.use(express.static(__dirname));
 
 app.post('/api/generate-docs', (req, res) => {
   try {
-    const templateDir = path.join(__dirname, 'templates');
+    const templateDir = path.join(process.cwd(), 'templates');
 
     if (!fs.existsSync(templateDir)) {
       return res.status(404).json({

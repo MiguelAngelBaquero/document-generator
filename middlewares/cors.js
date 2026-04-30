@@ -4,7 +4,6 @@ const ACCEPTED_ORIGINS = [
   `http://localhost:${process.env.PORT}`,
   `https://localhost:${process.env.PORT}`,
   `https://document-generator-pi.vercel.app`,
-  `https://document-generator-60lxaxdwo-miguel-baqueros-projects.vercel.app/`,
 ];
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => {
