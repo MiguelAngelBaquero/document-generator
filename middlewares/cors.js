@@ -3,7 +3,6 @@ import cors from 'cors';
 const ACCEPTED_ORIGINS = [
   `http://localhost:${process.env.PORT}`,
   `https://localhost:${process.env.PORT}`,
-  `https://document-generator-h04wajp2e-miguel-baqueros-projects.vercel.app`,
   `https://project-hd3cj.vercel.app`,
 ];
 
